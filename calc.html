@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PopCalc — Cute Math Studio</title>
+  <link rel="stylesheet" href="calc.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="brand">
+        <span class="blob"></span>
+        <div>
+          <div class="title">PopCalc</div>
+          <div class="sub">Cartoony Calculator + Math Buddy</div>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="btnClear" class="btn">Clear</button>
+        <button id="btnAC" class="btn">All Clear</button>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="calc">
+        <div class="screen">
+          <div id="expr" class="expr">0</div>
+          <div id="result" class="result">0</div>
+        </div>
+        <div class="keys">
+          <button data-key="(" class="key">(</button>
+          <button data-key=")" class="key">)</button>
+          <button data-key="%" class="key">%</button>
+          <button data-action="del" class="key">⌫</button>
+
+          <button data-key="7" class="key">7</button>
+          <button data-key="8" class="key">8</button>
+          <button data-key="9" class="key">9</button>
+          <button data-key="/" class="key op">÷</button>
+
+          <button data-key="4" class="key">4</button>
+          <button data-key="5" class="key">5</button>
+          <button data-key="6" class="key">6</button>
+          <button data-key="*" class="key op">×</button>
+
+          <button data-key="1" class="key">1</button>
+          <button data-key="2" class="key">2</button>
+          <button data-key="3" class="key">3</button>
+          <button data-key="-" class="key op">−</button>
+
+          <button data-key="0" class="key wide">0</button>
+          <button data-key="." class="key">.</button>
+          <button data-key="+" class="key op">+</button>
+          <button data-action="equals" class="key equals">=</button>
+        </div>
+        <div class="funbar">
+          <button data-fn="sqrt(" class="chip">√</button>
+          <button data-fn="pow(" class="chip">pow</button>
+          <button data-fn="sin(" class="chip">sin</button>
+          <button data-fn="cos(" class="chip">cos</button>
+          <button data-fn="tan(" class="chip">tan</button>
+          <button data-fn="log(" class="chip">log</button>
+          <button data-fn="ln(" class="chip">ln</button>
+          <button data-fn="abs(" class="chip">abs</button>
+          <button data-fn="pi" class="chip">π</button>
+          <button data-fn="e" class="chip">e</button>
+        </div>
+      </section>
+
+      <aside class="buddy">
+        <div class="buddy-head">
+          <div>
+            <div class="buddy-title">Math Buddy</div>
+            <div class="buddy-sub">Ask me equations or conversions</div>
+          </div>
+          <span class="badge">AI</span>
+        </div>
+        <div id="chat" class="chat"></div>
+        <div class="input-row">
+          <input id="ask" type="text" placeholder="e.g., (3+5)*2 or convert 12 cm to m" />
+          <button id="btnAsk" class="btn primary">Ask</button>
+        </div>
+        <div class="tips">
+          Try: <span>2^8</span>, <span>sqrt(81)</span>, <span>convert 5 km to m</span>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="calc.js"></script>
+</body>
+</html>
